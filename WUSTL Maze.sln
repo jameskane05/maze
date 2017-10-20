@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WUSTL Maze", "Assembly-CSharp.csproj", "{B775F241-1F29-81BF-5420-45D34A69CA17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WUSTL Maze", "Assembly-CSharp-firstpass.csproj", "{A0C33A06-D0C9-90F8-B522-BDD0D9DB2038}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WUSTL Maze", "Assembly-CSharp-Editor-firstpass.csproj", "{2C8CF699-B449-2DC2-FBCE-8A22524043F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B775F241-1F29-81BF-5420-45D34A69CA17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B775F241-1F29-81BF-5420-45D34A69CA17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B775F241-1F29-81BF-5420-45D34A69CA17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B775F241-1F29-81BF-5420-45D34A69CA17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0C33A06-D0C9-90F8-B522-BDD0D9DB2038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0C33A06-D0C9-90F8-B522-BDD0D9DB2038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0C33A06-D0C9-90F8-B522-BDD0D9DB2038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0C33A06-D0C9-90F8-B522-BDD0D9DB2038}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C8CF699-B449-2DC2-FBCE-8A22524043F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C8CF699-B449-2DC2-FBCE-8A22524043F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C8CF699-B449-2DC2-FBCE-8A22524043F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C8CF699-B449-2DC2-FBCE-8A22524043F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
