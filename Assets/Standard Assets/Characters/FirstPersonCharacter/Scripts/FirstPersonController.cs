@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
@@ -42,6 +43,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+    
 
         // Use this for initialization
         private void Start()
@@ -84,6 +86,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+
+
+
         }
 
 
@@ -110,6 +115,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_MoveDir.x = desiredMove.x*speed;
             m_MoveDir.z = desiredMove.z*speed;
+
+            if (Input.GetKey(KeyCode.E))
+            {
+                SceneManager.LoadScene("Menu");
+            }
 
 
             if (m_CharacterController.isGrounded)
@@ -241,12 +251,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             //m_MouseLook.LookRotation (transform, m_Camera.transform);
 
-			if (Input.GetKey (KeyCode.RightArrow)) {
+			if (Input.GetKey (KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) {
 				float turn = RotSpeed * 5 * Time.deltaTime;
 				transform.Rotate (0, turn, 0);
 			}
-			if (Input.GetKey (KeyCode.LeftArrow)) {
-				float turn = RotSpeed * -5 * Time.deltaTime;
+			if (Input.GetKey (KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+            {
+                float turn = RotSpeed * -5 * Time.deltaTime;
 				transform.Rotate (0, turn, 0);
 			}
         }
