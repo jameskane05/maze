@@ -1,0 +1,227 @@
+fileFormatVersion: 2
+guid: 9e2a109101fd5b64abfb85994a35bb01
+timeCreated: 1510430492
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: cap_2_pivot
+    100002: cap_3_pivot
+    100004: cap_4_pivot
+    100006: cap_5
+    100008: cap_pivot
+    100010: Cylinder01
+    100012: Cylinder02
+    100014: Cylinder03
+    100016: Cylinder04
+    100018: //RootNode
+    100020: Loft01_pivot
+    100022: Loft02_pivot
+    100024: Loft03_pivot
+    100026: Loft04_pivot
+    100028: Plane01
+    400000: cap_2_pivot
+    400002: cap_3_pivot
+    400004: cap_4_pivot
+    400006: cap_5
+    400008: cap_pivot
+    400010: Cylinder01
+    400012: Cylinder02
+    400014: Cylinder03
+    400016: Cylinder04
+    400018: //RootNode
+    400020: Loft01_pivot
+    400022: Loft02_pivot
+    400024: Loft03_pivot
+    400026: Loft04_pivot
+    400028: Plane01
+    2300000: cap_2_pivot
+    2300002: cap_3_pivot
+    2300004: cap_4_pivot
+    2300006: cap_5
+    2300008: cap_pivot
+    2300010: Cylinder01
+    2300012: Cylinder02
+    2300014: Cylinder03
+    2300016: Cylinder04
+    2300018: Loft01_pivot
+    2300020: Loft02_pivot
+    2300022: Loft03_pivot
+    2300024: Loft04_pivot
+    2300026: Plane01
+    3300000: cap_2_pivot
+    3300002: cap_3_pivot
+    3300004: cap_4_pivot
+    3300006: cap_5
+    3300008: cap_pivot
+    3300010: Cylinder01
+    3300012: Cylinder02
+    3300014: Cylinder03
+    3300016: Cylinder04
+    3300018: Loft01_pivot
+    3300020: Loft02_pivot
+    3300022: Loft03_pivot
+    3300024: Loft04_pivot
+    3300026: Plane01
+    4300000: cap_2_pivot
+    4300002: cap_3_pivot
+    4300004: cap_4_pivot
+    4300006: cap_5
+    4300008: cap_pivot
+    4300010: Cylinder01
+    4300012: Cylinder02
+    4300014: Cylinder03
+    4300016: Cylinder04
+    4300018: Loft01_pivot
+    4300020: Loft02_pivot
+    4300022: Loft03_pivot
+    4300024: Loft04_pivot
+    4300026: Plane01
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cylinder01Mat
+    second: {fileID: 2100000, guid: 4d2ccc886499faf42900228257b97d51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cylinder02Mat
+    second: {fileID: 2100000, guid: f6b9cfbf03fc1d24d8ed2db4ab19bea0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cylinder03Mat
+    second: {fileID: 2100000, guid: fc51e64e4971a0e41aa7aec7758b13a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cylinder04Mat
+    second: {fileID: 2100000, guid: b389c25ed08f13342a65db063f390c1b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Loft01_pivotMat
+    second: {fileID: 2100000, guid: 269ef218055441346938b5a02dea4239, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Loft02_pivotMat
+    second: {fileID: 2100000, guid: 66db68ddde07ada4aa1ef0c1332da79b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Loft03_pivotMat
+    second: {fileID: 2100000, guid: f424965a050bb3544895f861a32e9e6d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Loft04_pivotMat
+    second: {fileID: 2100000, guid: f19347aadaedd5b4aba06e5ab5a37a84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plane01Mat
+    second: {fileID: 2100000, guid: df9bada931728174e8d64be718411534, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cap_2_pivotMat
+    second: {fileID: 2100000, guid: 01db66083d84698449f53513abcce5e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cap_3_pivotMat
+    second: {fileID: 2100000, guid: f3a73b3f50bba3140914c799f35ce64a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cap_4_pivotMat
+    second: {fileID: 2100000, guid: 9238cdfa75674d64589bebb9a562fdbf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cap_5Mat
+    second: {fileID: 2100000, guid: 0aaf01cfe0fe6dc4b9ed8582eb3f66fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cap_pivotMat
+    second: {fileID: 2100000, guid: 9ac39d721533ed24c9ef96d6f42c035c, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

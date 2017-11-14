@@ -9,16 +9,22 @@ public class MenuScript : MonoBehaviour {
     public InputField ParticipantID;
     public Dropdown ExperimentType;
     public InputField ExperimenterInitials;
-    public InputField Date;
+    public Dropdown DateM;
+    public Dropdown DateD;
+    public Dropdown DateY;
     public GameObject FirstPanel;
-    public GameObject SelectPanel;
+    public GameObject APPanel;
+    public GameObject SPTPanel;
+    public GameObject TPPanel;
 
     private void Start()
     {
         // Comment out later, for testing only
-        if (!string.IsNullOrEmpty(PlayerPrefs.GetString("ParticipantID"))) {
+        if (!string.IsNullOrEmpty(PlayerPrefs.GetString("ExperimentType"))) {
             FirstPanel.SetActive(false);
-            SelectPanel.SetActive(true);
+            if (PlayerPrefs.GetString("ExperimentType") == "AP") APPanel.SetActive(true);
+            else if (PlayerPrefs.GetString("ExperimentType") == "SPT") SPTPanel.SetActive(true);
+            else if (PlayerPrefs.GetString("ExperimentType") == "TP") TPPanel.SetActive(true);
         }
     }
 
@@ -38,88 +44,164 @@ public class MenuScript : MonoBehaviour {
 
         // Debug.Log(ExperimentType);
         // Debug.Log(ExperimentType.captionText);
-        // Debug.Log(ExperimentType.captionText.text);
+        Debug.Log(ExperimentType.captionText.text);
 
         PlayerPrefs.SetString("ParticipantID", ParticipantID.text);
         PlayerPrefs.SetString("ExperimentType", ExperimentType.captionText.text);
         PlayerPrefs.SetString("ExperimenterInitials", ExperimenterInitials.text);
-        PlayerPrefs.SetString("Date", Date.text);
+        PlayerPrefs.SetString("Date", DateM.captionText.text + "-" + DateD.captionText.text + "-" + DateY.captionText.text);
+        SetDir();
 
-        string[] lines = {
-            "Participant ID: " + ParticipantID.text,
-            "Experiment Type: " + ExperimentType.captionText.text,
-            "Experimenter Initials: " + ExperimenterInitials.text,
-            "Date: " + Date.text
-        };
-        
-        System.IO.File.WriteAllLines(@"C:\Users\james\Desktop\" + ExperimentType.captionText.text + "-" + ParticipantID.text + "-" + Date.text + ".txt", lines);
+        if (ExperimentType.captionText.text == "AP") APPanel.SetActive(true);
+        else if (ExperimentType.captionText.text == "SPT") SPTPanel.SetActive(true);
+        else if (ExperimentType.captionText.text == "TP") TPPanel.SetActive(true);
+    }
 
+    static public void SetDir()
+    {
+        string newDir = System.IO.Directory.GetCurrentDirectory() + "\\" + PlayerPrefs.GetString("Date") + "-" + PlayerPrefs.GetString("ParticipantID") + "-" + PlayerPrefs.GetString("ExperimentType");
+        System.IO.Directory.CreateDirectory(newDir);
+        PlayerPrefs.SetString("dir", newDir);
     }
 
     public void JoystickPractice() {
-        PlayerPrefs.DeleteKey("Arrows");
+        PlayerPrefs.SetString("Direction", "F");
         SceneManager.LoadScene("Joystick Practice");
     }
 
     public void VisuomotorExpertise()
     {
-        PlayerPrefs.DeleteKey("Arrows");
+        PlayerPrefs.SetString("Direction", "F");
         SceneManager.LoadScene("Visuomotor Expertise Maze");
     }
 
-    public void TaskPracticeArrows()
+    public void TaskPractice_WithArrows()
     {
+        PlayerPrefs.SetString("Direction", "F");
         PlayerPrefs.SetInt("Arrows", 1);
         SceneManager.LoadScene("Task Practice");
     }
 
-    public void TaskPracticeNoArrows()
+    public void TaskPractice_NoArrows()
     {
+        PlayerPrefs.SetString("Direction", "F");
         PlayerPrefs.SetInt("Arrows", 0);
         SceneManager.LoadScene("Task Practice");
     }
 
-    public void TestTrialsMazeAFArrows()
+    public void MazeA_NoArrows_Fwd()
     {
-        PlayerPrefs.SetInt("Arrows", 1);
-        PlayerPrefs.SetString("Direction", "F");
-        SceneManager.LoadScene("Experimental Maze A");
-    }
-
-    public void TestTrialsMazeAFNoArrows() {
         PlayerPrefs.SetInt("Arrows", 0);
         PlayerPrefs.SetString("Direction", "F");
         SceneManager.LoadScene("Experimental Maze A");
     }
 
-    public void TestTrialsMazeARNoArrows()
+    public void MazeA_NoArrows_Rev()
     {
         PlayerPrefs.SetInt("Arrows", 0);
         PlayerPrefs.SetString("Direction", "R");
         SceneManager.LoadScene("Experimental Maze A");
     }
 
+    public void MazeB_NoArrows_Fwd()
+    {
+        PlayerPrefs.SetInt("Arrows", 0);
+        PlayerPrefs.SetString("Direction", "F");
+        SceneManager.LoadScene("Experimental Maze B");
+    }
 
-    public void TestTrialsMazeBFArrows()
+    public void MazeB_NoArrows_Rev()
+    {
+        PlayerPrefs.SetInt("Arrows", 0);
+        PlayerPrefs.SetString("Direction", "R");
+        SceneManager.LoadScene("Experimental Maze B");
+    }
+
+
+    // LOAD AP SCENES
+
+    public void AP_MazeA_WithArrows_Fwd()
+    {
+        PlayerPrefs.SetInt("Arrows", 1);
+        PlayerPrefs.SetString("Direction", "F");
+        SceneManager.LoadScene("Experimental Maze A");
+    }
+
+    public void AP_MazeB_WithArrows_Fwd()
     {
         PlayerPrefs.SetInt("Arrows", 1);
         PlayerPrefs.SetString("Direction", "F");
         SceneManager.LoadScene("Experimental Maze B");
     }
 
-    public void TestTrialsMazeBFNoArrows()
-    {
-        PlayerPrefs.SetInt("Arrows", 0);
+
+    // LOAD SPT SCENES
+
+    public void SPT_MazeA_WithArrows_Rotate () {
+        PlayerPrefs.SetInt("Arrows", 1);
         PlayerPrefs.SetString("Direction", "F");
+        PlayerPrefs.SetString("RotateOrPause", "Rotate");
+        SceneManager.LoadScene("Experimental Maze A");
+    }
+
+    public void SPT_MazeA_WithArrows_Pause()
+    {
+        PlayerPrefs.SetInt("Arrows", 1);
+        PlayerPrefs.SetString("Direction", "F");
+        PlayerPrefs.SetString("RotateOrPause", "Pause");
+        SceneManager.LoadScene("Experimental Maze A");
+    }
+
+    public void SPT_MazeB_WithArrows_Rotate()
+    {
+        PlayerPrefs.SetInt("Arrows", 1);
+        PlayerPrefs.SetString("Direction", "F");
+        PlayerPrefs.SetString("RotateOrPause", "Rotate");
         SceneManager.LoadScene("Experimental Maze B");
     }
 
-    public void TestTrialsMazeBRNoArrows()
+    public void SPT_MazeB_WithArrows_Pause()
     {
-        PlayerPrefs.SetInt("Arrows", 0);
-        PlayerPrefs.SetString("Direction", "R");
+        PlayerPrefs.SetInt("Arrows", 1);
+        PlayerPrefs.SetString("Direction", "F");
+        PlayerPrefs.SetString("RotateOrPause", "Pause");
         SceneManager.LoadScene("Experimental Maze B");
     }
+
+
+    // LOAD TP SCENES
+
+    public void TP_MazeA_WithArrows_1Pic() {
+        PlayerPrefs.SetInt("Arrows", 1);
+        PlayerPrefs.SetString("Direction", "F");
+        PlayerPrefs.SetString("Intro", "1Pic");
+        SceneManager.LoadScene("Experimental Maze A");
+    }
+
+    public void TP_MazeA_WithArrows_8Pics()
+    {
+        PlayerPrefs.SetInt("Arrows", 1);
+        PlayerPrefs.SetString("Direction", "F");
+        PlayerPrefs.SetString("Intro", "8Pics");
+        SceneManager.LoadScene("Experimental Maze A");
+    }
+
+    public void TP_MazeB_WithArrows_1Pic()
+    {
+        PlayerPrefs.SetInt("Arrows", 1);
+        PlayerPrefs.SetString("Direction", "F");
+        PlayerPrefs.SetString("Intro", "1Pic");
+        SceneManager.LoadScene("Experimental Maze B");
+    }
+
+    public void TP_MazeB_WithArrows_8Pics()
+    {
+        PlayerPrefs.SetInt("Arrows", 1);
+        PlayerPrefs.SetString("Direction", "F");
+        PlayerPrefs.SetString("Intro", "8Pics");
+        SceneManager.LoadScene("Experimental Maze B");
+    }
+
 
     void OnApplicationQuit()
     {

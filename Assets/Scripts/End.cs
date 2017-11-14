@@ -10,13 +10,7 @@ public class End : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        TrailRenderer trail = GameObject.Find("Trail").GetComponent<TrailRenderer>();
-        GameObject player = GameObject.Find("SubjectControllerWithTrail(Clone)").GetComponent<GameObject>();
-        Debug.Log(player);
-        Text text = GameObject.Find("Text").GetComponent<Text>();
-        Debug.Log(text.text);
-        text.text = "You have reached the end.";
-        trail.material = colorMat;
+        Debug.Log("MazeEnd() being called due to maze completion");
         MazeCtrl.MazeEnd();
     }
     

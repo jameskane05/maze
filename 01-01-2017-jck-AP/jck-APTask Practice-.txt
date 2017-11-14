@@ -1,0 +1,8 @@
+Participant ID: jck
+Experiment Type: AP
+Experimenter Initials: jck
+Maze: Task Practice
+Date: 01-01-2017
+Distance: 22.01996
+Time: 4.556113
+Avg. Velocity: 4.833059
